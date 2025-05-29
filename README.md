@@ -30,6 +30,9 @@ This lab demonstrates DNS record management including A-Records and CNAME record
 - Password: [Your configured password]
 
 #### 3. From Client-1 try to ping "mainframe" notice that it fails
+
+![Screenshot 2025-05-28 145622](https://github.com/user-attachments/assets/b297d525-7796-42bc-8734-ad0b7e37dd6c)
+
 On Client-1, open Command Prompt as Administrator:
 
 ```cmd
@@ -44,6 +47,9 @@ nslookup mainframe
 **Observation**: DNS lookup fails - no DNS record exists
 
 #### 5. Create a DNS A-record on DC-1 for "mainframe" and have it point to DC-1's Private IP address
+
+![Screenshot 2025-05-28 145526](https://github.com/user-attachments/assets/db68512c-540a-4a08-ab83-15249e4b4d85)
+
 On DC-1:
 1. Open **DNS Manager** (Start → Administrative Tools → DNS)
 2. Expand server name → Forward Lookup Zones → mydomain.com
@@ -89,6 +95,9 @@ ipconfig /displaydns
 **Observation**: Shows cached DNS entries including the old "mainframe" record
 
 #### 4. Flush the DNS cache (ipconfig /flushdns)
+
+![Screenshot 2025-05-28 145740](https://github.com/user-attachments/assets/2b9d128f-78af-4348-b262-d08ba9401362)
+
 ```cmd
 ipconfig /flushdns
 ```
@@ -105,6 +114,8 @@ ipconfig /displaydns
 ping mainframe
 ```
 **Observation**: Now pings the new IP address (8.8.8.8)
+
+![Screenshot 2025-05-28 145833](https://github.com/user-attachments/assets/58d1a19c-dbbf-45ca-a5ea-55813a76902c)
 
 ---
 
@@ -127,6 +138,8 @@ On Client-1:
 ping search
 ```
 **Observation**: Resolves "search" to Google's IP address and attempts to ping
+
+![Screenshot 2025-05-28 145920](https://github.com/user-attachments/assets/7a21a039-ac28-466b-9bfd-b1661309940e)
 
 #### 3. On Client-1, nslookup "search", observe the results of the CNAME record
 ```cmd
