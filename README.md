@@ -48,7 +48,6 @@ nslookup mainframe
 
 #### 5. Create a DNS A-record on DC-1 for "mainframe" and have it point to DC-1's Private IP address
 
-![Screenshot 2025-05-28 145526](https://github.com/user-attachments/assets/db68512c-540a-4a08-ab83-15249e4b4d85)
 
 On DC-1:
 1. Open **DNS Manager** (Start → Administrative Tools → DNS)
@@ -96,7 +95,7 @@ ipconfig /displaydns
 
 #### 4. Flush the DNS cache (ipconfig /flushdns)
 
-![Screenshot 2025-05-28 145740](https://github.com/user-attachments/assets/2b9d128f-78af-4348-b262-d08ba9401362)
+
 
 ```cmd
 ipconfig /flushdns
